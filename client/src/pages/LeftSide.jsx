@@ -17,7 +17,7 @@ const LeftBanner = () => {
 					Hi, I'm{' '}
 					<span className='text-designColor capitalize'>Elias Dewa</span>
 				</h1>
-				<h2 className='text-3xl md:text-5xl font-bold text-black'>
+				<h2 className='text-3xl md:text-5xl font-bold text-black dark:text-white'>
 					a <span>{text}</span>
 					<Cursor
 						cursorBlinking='false'
@@ -25,18 +25,10 @@ const LeftBanner = () => {
 						cursorColor='#ff014f'
 					/>
 				</h2>
-				<p className='text-base font-bodyFont leading-6 tracking-wide'>
-					I’m a full-stack developer specializing in building (and occasionally
-					designing) exceptional digital experiences. Currently, I’m focused on
+				<p className='text-base pt-5 font-bodyFont leading-6 tracking-wide'>
+					I’m a full-stack developer specializing in building exceptional digital experiences. Currently, I’m focused on
 					building responsive full-stack web applications.
 				</p>
-			</div>
-			{/* Media */}
-			<div className="mt-5">
-				<h1 className='text-base uppercase font-titleFont mb-4'>
-					You can find me in
-				</h1>
-				<SocialLinks />
 			</div>
 		</div>
 	);
