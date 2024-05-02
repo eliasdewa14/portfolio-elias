@@ -3,7 +3,7 @@ import { links } from "../data/data"
 const SocialLinks = () => {
   return (
     <div>
-      <ul className="flex gap-2">
+      <ul className="flex gap-5">
         {links.map(({ id, child, href, style, download }) => (
           <li
             key={id}
@@ -15,7 +15,7 @@ const SocialLinks = () => {
           >
             <a
               href={href}
-              className="flex justify-between items-center text-gray-500"
+              className="flex justify-between items-center hover:scale-105"
               download={download}
               target="_blank"
               rel="noreferrer"

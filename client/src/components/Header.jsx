@@ -2,7 +2,7 @@ import { Navbar } from 'flowbite-react';
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';
-import SocialLinks from './SocialLinks';
+import logo from '../assets/images/logo.png';
 
 
 export default function Header() {
@@ -29,39 +29,43 @@ export default function Header() {
 			className='shadow-md fixed top-0 w-full z-50 dark:bg-[#2B2D42] dark:text-white'
 		>
 			<Navbar.Brand href='/'>
-				<span className='self-center whitespace-nowrap text-xl font-semibold dark:text-white'>
-					Elias Dewa
-				</span>
+				<img
+					src={logo}
+					className='mr-3 w-full h-20 sm:h-30 dark:text-white'
+					alt='Ed Logo'
+				/>
+				<span className='self-center whitespace-nowrap text-xl font-semibold dark:text-white'></span>
 			</Navbar.Brand>
 			<div className='flex md:order-2 items-center justify-between gap-3'>
-				<SocialLinks />
 				<button
 					className='rounded-full dark:text-black font-semibold'
 					onClick={handleThemeSwitch}
 				>
 					{theme === 'dark' ? (
-						<MdOutlineLightMode className='w-8 h-8 text-gray-500' />
+						<MdOutlineLightMode className='w-8 h-8 text-gray-300' />
 					) : (
-						<MdOutlineDarkMode className='w-8 h-8 text-gray-500' />
+						<MdOutlineDarkMode className='w-8 h-8 text-dark' />
 					)}
 				</button>
 				<Navbar.Toggle />
 			</div>
 			<Navbar.Collapse>
 				<Navbar.Link active={path === '/'} as={'div'}>
-					<Link to='/'>Home</Link>
+					<Link to='/' className='text-xl'>
+						Home
+					</Link>
 				</Navbar.Link>
 				<Navbar.Link active={path === '/projects'} as={'div'}>
-					<Link to='/projects'>Projects</Link>
+					<Link to='/projects' className='text-xl'>Projects</Link>
 				</Navbar.Link>
 				<Navbar.Link active={path === '/about'} as={'div'}>
-					<Link to='/about'>About</Link>
+					<Link to='/about' className='text-xl'>About</Link>
 				</Navbar.Link>
 				<Navbar.Link active={path === '/contact'} as={'div'}>
-					<Link to='/contact'>Contact</Link>
+					<Link to='/contact' className='text-xl'>Contact</Link>
 				</Navbar.Link>
 				<Navbar.Link active={path === '/resume'} as={'div'}>
-					<Link to='/resume'>Resume</Link>
+					<Link to='/resume' className='text-xl'>Resume</Link>
 				</Navbar.Link>
 			</Navbar.Collapse>
 		</Navbar>

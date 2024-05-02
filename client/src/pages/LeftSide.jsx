@@ -26,9 +26,13 @@ const LeftBanner = () => {
 					/>
 				</h2>
 				<p className='text-base pt-5 font-bodyFont leading-6 tracking-wide'>
-					I’m a full-stack developer specializing in building exceptional digital experiences. Currently, I’m focused on
-					building responsive full-stack web applications.
+					I’m a full-stack developer specializing in building
+					responsive full-stack web applications.
 				</p>
+				<div className='flex flex-col gap-4'>
+					<p className='text-xl sm:text-2xl '>LET'S CONNECT</p>
+					<SocialLinks />
+				</div>
 			</div>
 		</div>
 	);
