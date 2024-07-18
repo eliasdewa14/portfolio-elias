@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply transition-colors duration-200;
+}
+.active {
+  @apply font-bold text-[#08D9D6]
+}
+
+.input {
+  @apply w-full rounded-lg bg-slate-50 text-gray-800 dark:text-gray-600 border text-sm py-2 focus:outline-none relative block overflow-hidden shadow-md focus-within:border-blue-600
+}
+
+@layer components {
+  .socialIcon {
+    @apply text-blue-600 text-2xl inline-flex items-center justify-center rounded-md hover:scale-110 cursor-pointer;
+  }
+    .contactInput {
+      @apply w-full h-12 rounded-lg border-b-[1px] border-b-gray-600 dark:bg-slate-200 bg-[#191b1e] px-4 active:outline-none focus-visible:outline-[#251232] outline-none focus-visible:border-b-transparent duration-300 text-white dark:text-slate-900
+    }
+    .contactTextArea {
+      @apply w-full rounded-lg border-b-[1px] border-b-gray-600 dark:bg-slate-200 bg-[#191b1e] px-4 py-2 active:outline-none focus-visible:outline-[#251232] outline-none focus-visible:border-b-transparent duration-300 resize-none text-white dark:text-slate-900
+    }
+}
